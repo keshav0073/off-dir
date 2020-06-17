@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+       
+    <section class="home-slide">
+        {% if ab_sli%}
+        {% for x in ab_sli %}
+        <img src="{{ x.image.url }}">
+        {% endfor %}
+        {% else %}
+        <img src="{% static 'images/home-hero-img.jpg'%}">
+        {% endif %}
+    
+    </section>
+    
+    {% if dr%}
+    <section class="dr-gedar-section">
+        <div class="container">
+            <div class="dr-gedar-title">
+               
+                {%for x in dr%}
+                <h1><strong>{{ x.text_in_strong }}</strong> {{ x.text_out_strong }}</h1>
+                {%endfor %}
+               
+            </div>
+        </div>
+    </section>
+    {% else %}
+   
+    {% endif %}
+
+<section class="gallery-section">
+    {% if Gallery%}
+    {% for x in Gallery %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="blog-heading">
+                    <h2>{{ x.title }}</h2>
+                    <p>{{ x.text }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="gallery-gedar-img">
+                    <ul>
+                        {% for y in x.image.all %}
+                        <li><a href="{{ y.img.url }}" rel="lightbox[]"><img src="{{ y.img.url }}" alt=""></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+   
+    {% endif %}
+</section>
+{% endblock %}
+            

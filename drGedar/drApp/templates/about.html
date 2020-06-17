@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block body %}
+   
+    <section class="home-slide">
+        {% if ab_sli%}
+            {% for x in ab_sli %}
+            <img src="{{ x.image.url }}">
+            {% endfor %}
+        {% else %}
+        {% endif %}
+    </section>
+
+    <section class="dr-gedar-section">
+        <div class="container">
+            <div class="dr-gedar-title">
+                {% if dr %}
+                {% for x in dr %}
+                <h1><strong>{{ x.text_in_strong }}</strong> {{ x.text_out_strong }}</h1>
+                {% endfor %}
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+   
+
+<section class="about-inner-section">
+    <div class="container">
+        {% if ab_in %}
+        <div class="row">
+            {% for x in ab_in %}
+            <div class="col-sm-12">
+                <div class="about-content">
+                    {% if x.img %}
+                    <div class="about-left">
+                        <img src="{{ x.img.url  }}">
+                    </div>
+                    {% else %}
+                    {% endif %}
+                    <h3>{{ x.title }}</h3>
+                    {% autoescape off %}{{ x.text }}{% endautoescape %}
+        
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        </div>
+        {% else %}
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}

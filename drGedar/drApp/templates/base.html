@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DR Gedar</title>
+        <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css'%}">
+        <link rel="stylesheet" href="{% static 'css/menu.css'%}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+        <link rel="stylesheet" href="{% static 'css/responsive-media.css'%}">
+        <link rel="stylesheet" href="{% static 'css/lightbox.css'%}">
+    </head>
+    <body>
+        <header>
+            <div class="header-section" id="myHeader">
+                <div class="top-head">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="top-right">
+                                    <span><img src="{% static 'images/email-icon.png'%}" alt=""> <a href="mailto:Dr Gedar@gmail.com">Dr
+                                            Gedar@gmail.com</a></span>
+                                    <div class="social-top">
+                                        <a href="#"><img src="{% static  'images/twitter-icon.png' %}" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/facebook-icon.png'%}" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/linkedin-icon.png'%}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="head-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="logo">
+                                    <a href="{% url 'index'%}"> <img src="{% static 'images/dr-gedar-logo.png'%}" alt=""> </a>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="header-rlt">
+                                    <div class="menu-bar">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                                data-target="#myNavbar">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        <div class="collapse navbar-collapse iphonNav nav-top navigation clearfix"
+                                            id="myNavbar">
+                                            <ul>
+                                                <li class="current-menu-item"> <a href="{% url 'index' %}">Home</a></li>
+                                                <li> <a href="{% url 'about'%}">About</a></li>
+                                                <li class="menu-item-has-children"> <a href="#">Events</a>
+                                                    <ul id="menu-top-menu" class="menu">
+                                                        <li><a href="#">Events - 1</a></li>
+                                                        <li><a href="#">Events - 2</a></li>
+                                                        <li class="menu-item-has-children"><a href="#">Events - 3</a>
+                                                            <ul id="menu-top-menu" class="menu">
+                                                                <li><a href="#">Events - 1</a></li>
+                                                                <li><a href="#">Events - 2</a></li>
+                                                                <li><a href="#">Events - 3</a></li>
+                                                                <li><a href="#">Events - 4</a></li>
+                                                                <li><a href="#">Events - 5</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Events - 4</a></li>
+                                                        <li><a href="#">Events - 5</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li> <a href="{% url 'gallery' %}">Gallery</a></li>
+                                                <li> <a href="{% url 'blog' %}">Blog</a></li>
+                                                <li> <a href="{% url 'contact' %}">Contact </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% block body %}
+
+        {% endblock %}
+        {% if footer %}
+            <footer>
+                <div class="footer-section">
+                    <div class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="footer-logo-img">
+                                        {% for x in footer %}
+                                        {% if not x.logo %}
+                                        <figure><img src="{% static 'images/footer-logo.png'%}" alt=""></figure>
+                                        {% else %}
+                                        <figure><img src="{{ x.logo.url }}" alt=""></figure>
+                                        {% endif %}
+                                        <span>Follow Us</span>
+                                        <div class="footer-social">
+                                            {% if not x.image.all %}
+                                            <a href="#"><img src="{% static 'images/footer-instagram-icon.png'%}" alt=""></a>
+                                            <a href="#"><img src="{% static 'images/footer-twitter-icon.png'%}" alt=""></a>
+                                            <a href="#"><img src="{% static 'images/footer-facebook-icon.png'%}" alt=""></a>
+                                            <a href="#"><img src="{% static 'images/footer-linkedin-icon.png'%}" alt=""></a>
+                                            {% else %}
+                                            {% for y in x.image.all %}
+                                            <a href="#"><img src="{{ y.img.url }}" alt=""></a>
+                                            {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-contant-bg">
+                        <div class="container">
+                            <div class="footer-navebar">
+                                <ul>
+                                    <li> <a href="{% url 'index' %}">Home</a></li>
+                                    <li> <a href="{% url 'about' %}">About</a></li>
+                                    <li> <a href="#">Events</a></li>
+                                    <li> <a href="{% url 'gallery' %}">Gallery</a></li>
+                                    <li> <a href="{% url 'blog'%}">Blog</a></li>
+                                    <li> <a href="{% url 'contact'%}">Contact </a></li>
+                                </ul>
+                            </div>
+                            <div class="copy-right">
+                                <p>© 2020 Web Design & Develoo By <a href="https://www.galaxywing.com/"
+                                        target="_blank">Galaxywing</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {% else %}
+        <footer>
+            <div class="footer-section">
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="footer-logo-img">
+                                    <figure><img src="{% static 'images/footer-logo.png'%}" alt=""></figure>
+                                    <span>Follow Us</span>
+                                    <div class="footer-social">
+                                        <a href="#"><img src="{% static 'images/footer-instagram-icon.png' %}" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/footer-twitter-icon.png' %}" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/footer-facebook-icon.png' %}" alt=""></a>
+                                        <a href="#"><img src="{% static 'images/footer-linkedin-icon.png' %}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contant-bg">
+                    <div class="container">
+                        <div class="footer-navebar">
+                                <ul>
+                                    <li> <a href="{% url 'index' %}">Home</a></li>
+                                    <li> <a href="{% url 'about' %}">About</a></li>
+                                    <li> <a href="#">Events</a></li>
+                                    <li> <a href="{% url 'gallery' %}">Gallery</a></li>
+                                    <li> <a href="{% url 'blog'%}">Blog</a></li>
+                                    <li> <a href="{% url 'contact'%}">Contact </a></li>
+                                </ul>
+                        </div>
+                        <div class="copy-right">
+                            <p>© 2020 Web Design & Develoo By <a href="https://www.galaxywing.com/"
+                                    target="_blank">Galaxywing</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% endif %}
+        
+        
+        <div class="modal fade our-video" id="myModal">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body videoIframe">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/EngW7tLk6R8?rel=0" frameborder="0"
+                            allowfullscreen="" id="ids-1"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="back-top-wrapper" class="visible-desktop">
+            <p id="back-top" style="display: none;">
+                <a href="javascript:;" class=""></a>
+            </p>
+        </div>
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+        <script src="{% static 'js/iphone-menu.js'%}"></script>
+        <script src="{% static 'js/owl.carousel.js'%}"></script>
+        <script src="{% static 'js/lightbox.js'%}"></script>
+        <script>
+            var homepageVideoURL = jQuery("#myModal .videoIframe iframe").attr("src");
+            jQuery('#myModal').on('show.bs.modal', function (e) {
+                jQuery("#myModal .videoIframe iframe").attr("src", homepageVideoURL + '&autoplay=1');
+            });
+            //on close remove
+            jQuery('#myModal').on('hidden.bs.modal', function () {
+                homepageVideoURL = jQuery("#myModal .videoIframe iframe").attr("src");
+                jQuery("#myModal .videoIframe iframe").attr("src", '');
+            });
+            
+        </script>
+        <script>
+            jQuery(function () {
+                    jQuery("#phone").mask('?(+91) 9999999999', { autoclear: false });
+                });
+        </script>
+    </body>
+</html>

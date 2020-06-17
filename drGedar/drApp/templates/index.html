@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<section class="home-slide">
+    <div id="carousel-example-captions" class="carousel  slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+           {% for x in sli %}
+                {% if not x.image.all %}
+                    <div class="carousel-item active">
+                        <img src="{% static 'images/hero-image.jpg'%}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/hero-image-1.jpg'%}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/hero-image-2.jpg'%}" alt="">
+                    </div>
+                {% else %}
+                        {% for y in x.image.all %}
+                            {% if forloop.counter0 == 0 %}
+                            <div class="carousel-item active">
+                                <img src="{{ y.img.url }}" alt="">
+                            </div>
+                            {% else %}
+                            <div class="carousel-item">
+                                <img src="{{ y.img.url }}" alt="">
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                {% endif %}
+
+            {% endfor %}
+        </div>
+        <div class="slider-arrow">
+            <a class="carousel-control-prev" href="#carousel-example-captions" role="button" data-slide="prev"> <img
+                    src="{% static 'images/prev.png' %}" alt="">
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-captions" role="button" data-slide="next"> <img
+                    src="{% static 'images/next.png'%}" alt="">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="dr-gedar-section">
+    <div class="container">
+        <div class="dr-gedar-title">
+            {% if dr %}
+            {% for x in dr %}
+            <h1><strong>{{ x.text_in_strong }}</strong> {{ x.text_out_strong }}</h1>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+<section class="blog-section home-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="blog-heading">
+                    <h2>Blog Events</h2>
+                </div>
+            </div>
+        </div>
+        <div class="message-form">
+            <div class="row">
+                {% if obj %}
+                <div class="col-sm-6">
+                    <div class="blog-event-img">
+                        {% if obj.main_image %}
+                        <img src="{{ obj.main_image.url }}" alt="">
+                        {% else %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="message-form-content">
+                        {% if obj.title %}
+                            <h2>{{obj.title}}</h2>
+                        {% else %}
+                        {% endif %}
+                        <ul>
+                            {% if obj.date %}
+                            <li> <a href="blog/{{obj.slug}}"> <img src="{% static 'images/calendar-icon.png'%}" alt=""> 
+                                {{ obj.date }}</a> </li>
+                            {% else %}
+                            {% endif %}
+
+                            {% if obj.write_by %}
+                            <li> <a href="blog/{{obj.slug}}"> <img src="{% static 'images/admin-icon.png'%}" alt=""> {{ obj.write_by}}</a> </li>
+                            {% else %}
+                            {% endif %}
+                        </ul>
+                        {% if obj.message %}
+                            {% autoescape off %}{{ obj.message | slice:":80" }}{% endautoescape %}
+                        {% else %}
+                        {% endif %}
+                        
+                        <div class="read-more-btn">
+                            <a href="blog/{{obj.slug}}" class="button">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+             
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="political-section">
+    <div class="container">
+        <div class="row">
+            {% if obj1 %}
+            {% for x in obj1 %}
+            <div class="col-sm-4">
+                <div class="political-commitment">
+                    {% if x.main_image %}
+                        <img src="{{x.main_image.url}}" alt="">
+                    {% else %}
+                        <!-- <img src="{% static 'images/political-commitment-img.jpg'%}" alt=""> -->
+                    {% endif %}
+                    <div class="know-about-content">
+                        <h3>{{ x.title }}</h3>
+                        <ul>
+                            <li> <a href="blog/{{x.slug}}"> <img src="{% static 'images/calendar-icon.png'%}" alt="">{{ x.date }}</a> </li>
+                            <li> <a href="blog/{{x.slug}}"> <img src="{% static 'images/admin-icon.png'%}" alt=""> {{ x.write_by}}</a> </li>
+                        </ul>
+                        <p>{% autoescape off %}{{x.message|slice:":130"}}{% endautoescape%}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="political-party-section">
+    <div class="container-fluid">
+        {% if pol_party %}
+        {% for x in pol_party %}
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="congress-roots">
+                    <div class="congress-div-left">
+                        
+                        <span>{{ x.side_title }}</span>
+                        <div class="drdedar-img">
+                            {% if x.image %}
+                            <img src="{{ x.image.url }}" alt="">
+                            {% else %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="congress-roots-img">
+                    <div class="roots-col-right">
+                        <h3>{{ x.title }}</h3>
+                            {% autoescape off %}{{ x.message }}{% endautoescape %}
+                        <div class="dr-dedar-title">{{ x.signature }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        {% endif %}
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        {% if Testimonial %}
+        {% for x in Testimonial %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="blog-heading">
+                    <h2>{{ x.title }}</h2>
+                    <p>{{ x.text  }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% if x.image.all %}
+            {% for y in x.image.all %}
+            <div class="col-sm-4">
+                <div class="item">
+                    <div class="testimonials-service-img">
+                        <figure><img src="{{ y.Main_img.url }}" alt=""></figure>
+                        <div class="watch-video">
+                            <a href="#" data-toggle="modal" data-target="#myModal">
+                                <figure><img src="{{ y.video_img.url }}" alt=""> </figure> <span>Watch
+                                    Video</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% else %}
+        {% endif %}
+        
+    </div>
+</section>
+
+
+<section class="gallery-section home-gallery">
+    {% if Gallery%}
+    {% for x in Gallery %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="blog-heading">
+                    <h2>{{ x.title }}</h2>
+                    <p>{{ x.text }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="gallery-gedar-img">
+                    <ul>
+                        {% for y in x.image.all %}
+                        <li><a href="{{ y.img.url }}" rel="lightbox[]"><img src="{{ y.img.url }}" alt=""></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    {% endif %}
+</section>
+
+<section class="contact-touch-section">
+</section>
+
+<section class="contact-form">
+    <div class="container">
+        <div class="form-consulation">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="blog-heading">
+                        <h2>Get In Touch</h2>
+                        <p>Subscribe to the campaign updates by entering the following
+                            information below.
+                        </p>
+                    </div>
+                    <div class="gform_wrapper">
+                        <form method="POST" enctype="multipart/form-data" action="{% url 'contact_form' %}">
+                            {% csrf_token%}
+                            <div class="gform_body">
+                                <ul class="gform_fields">
+                                    <li class="gfield gf_left_half">
+                                        <label class="gfield_label">First Name*</label>
+                                        <div class="ginput_container">
+                                            <input type="text" class="medium" name="first_name" value="" required="required">
+                                        </div>
+                                    </li>
+                                    <li class="gfield gf_left_half">
+                                        <label class="gfield_label">Last Name*</label>
+                                        <div class="ginput_container">
+                                            <input type="text" class="medium" name="last_name" value="" required="required">
+                                        </div>
+                                    </li>
+                                    <li class="gfield">
+                                        <label class="gfield_label">E-Mail Address*</label>
+                                        <div class="ginput_container">
+                                            <input type="email" class="medium" name="email" value="" required="required">
+                                        </div>
+                                    </li>
+                                    <li class="gfield">
+                                        <label class="gfield_label">Phone No.*</label>
+                                        <div class="ginput_container">
+                                            <input type="tel" id="phone" class="medium" name="phone_number" value="" required="required" data-intl-tel-input-id="0"
+                                                onkeyup="if (/\D/g.test(this.value)) this.value =
+                                                                                    this.value.replace(/\D/g,'')" maxlength=10>
+                                        </div>
+                                    </li>
+                                    <li class="gfield">
+                                        <label class="gfield_label">Message*</label>
+                                        <div class="ginput_container">
+                                            <textarea name="message" class="textarea medium" required="required"></textarea>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gform_footer">
+                                <input type="submit" name="" value="submit" class="button-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock%}

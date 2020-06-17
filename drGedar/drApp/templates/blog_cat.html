@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="home-slide">
+    {% if ab_sli%}
+    {% for x in ab_sli %}
+    <img src="{{ x.image.url }}">
+    {% endfor %}
+    {% else %}
+    <img src="{% static 'images/home-hero-img.jpg'%}">
+    {% endif %}
+
+</section>
+
+<section class="dr-gedar-section">
+    <div class="container">
+        <div class="dr-gedar-title">
+            {% if dr %}
+
+            {% for x in dr %}
+            <h1><strong>{{ x.text_in_strong }}</strong> {{ x.text_out_strong }}</h1>
+            {% endfor %}
+            
+            {% else %}
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+
+
+<section class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="blog-heading">
+                    <h2>Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row blog-section-post">
+            <div class="col-sm-9">
+
+                <div class="blog-left">
+                    {% if z_list %}
+                    {% for x,y in z_list %}
+                    <div class="blog-col">
+                       
+                        <div class="blog-image">
+                            {% if x.main_image %}
+                            <img src="{{ x.main_image.url }}" alt="Default">
+                            {% else  %}
+                            {% endif %}
+                            <div class="blog-date"><{{x.date}}</div>
+                        </div>
+                        <div class="blog-content">
+                            <h4>{{x.title }}</h4>
+                            <div class="comment-div">
+                                <ul>
+                                    <li><img src="{% static 'images/user-icon.png' %}"
+                                                alt="Icon">{{x.write_by}}</li>
+                                    <li><img src="{% static 'images/comment-icon.png' %}"
+                                                alt="Icon">{{y}}&nbsp;Comment</li>
+                                </ul>
+                            </div>
+                            <div class="default-css">
+                                {% autoescape off %}{{x.message|slice:":80"}}{% endautoescape %}
+                            </div>
+                            <a href="{% url 'blog_detail' x.slug %}" class="button">Read More</a>
+                        </div>
+                       
+                    </div>
+                        {% endfor %}
+                        {% else %}
+                        {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="blog-sidebar">
+                    <form class="search-form" method="POST" action="{% url 'get_query'%}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="search" class="search-input search-field" placeholder="Search Here..." value="" name="search">
+                        <input type="submit" name="submit" value="" class="search-btn button-search">
+                    </form>
+                    <div class="blog-side-category">
+                        <h3>Categories</h3>
+                        {% if cat%}
+                        <ul>
+                            {% for x in cat %}
+                            <li class="cat-item cat-item-1"><a href="{% url 'cat' x.type %}">{{x.type}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        
+                        {% endif %}
+                    </div>
+                    <div class="blog-side-category">
+                        <h3>RECENT POST</h3>
+                        {% if Recent %}
+                        {% for x in Recent %}
+                        <div class="recent-posts">
+                            {% if x.main_image %}
+                            <figure><a href="#"><img src="{{x.main_image.url}}" alt="Default"></a></figure>
+                            {% else %}
+                            {% endif %}
+                            <figcaption>
+                                <h4><a href="{% url 'blog_detail' x.slug %}">{{x.title}}</a>
+                                </h4>
+                                <span><a href="{% url 'blog_detail' x.slug %}">{{x.date}} </a></span>
+                            </figcaption>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                       
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

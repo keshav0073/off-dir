@@ -1,0 +1,288 @@
+@media (min-width:1200px){
+     .container{max-width: 1350px;}
+}
+@media(max-width:1799px){}
+@media (max-width:1699px){}
+@media (max-width:1499px){}
+@media (max-width:1399px){}
+@media (max-width:1399px){ 
+.header-rlt { padding: 10px 0; }
+.dr-gedar-title h1 { font-size: 36px; }
+.dr-gedar-title { padding: 0 0 2px; }
+.blog-section { padding: 40px 0 0 0; }
+.blog-heading h2 { font-size: 36px; padding: 0 0 13px; }
+.message-form-content { padding: 12px 0 0 18px; }
+.message-form-content h2 { font-size: 27px; }
+.message-form-content ul { margin: 15px 0 10px 0; padding: 5px 0; }
+.message-form-content p { font-size: 17px; margin: 0 0 8px; }
+.message-form-content span { font-size: 17px; }
+.read-more-btn { padding-top: 25px; }
+.button { font-size: 16px; line-height: 50px; width: 135px; height: 50px; }
+.button::before { width: 150px; height: 66px; }
+.political-party-section { padding: 55px 0 96px 0; }
+.congress-roots-img { padding: 100px 0 100px 235px; }
+.congress-roots-img h3 { font-size: 36px; margin: 0 0 8px; }
+.congress-roots-img span { font-size: 20px; line-height: 28px; margin: 0 0 6px; }
+.congress-roots-img p { font-size: 16px; }
+.dr-dedar-title { font-size: 45px; padding-top: 22px; }
+.congress-roots span { font-size: 112px; top: 50%; transform: translate(-135px, -50%); }
+.congress-roots::after { bottom: -52px; right: 320px; width: 130px; height: 110px; }
+.blog-heading p { font-size: 16px; line-height: 26px; margin: 11px 0 6px 0; padding: 0; }
+.watch-video span { font-size: 22px; }
+.gallery-section { padding: 45px 0 0 0; }
+
+/*---------------------contact------------------------*/
+.Contact-margin { margin: 0; padding-top: 35px; }
+
+/*-------------------------about----------------------*/
+.about-inner-section { padding: 35px 0 0; }
+.about-left { width: 546px; height: 546px; }
+.about-content h3 { font-size: 36px; margin: 0 0 10px; }
+.about-content span { font-size: 16px; line-height: 21px; margin: 0 0 8px; }
+.about-content p { font-size: 16px; line-height: 25px; margin: 0 0 9px; }
+.padding-top { padding-top: 50px; }
+}
+
+@media (max-width:1199px){
+     .head-bottom { padding: 10px 0 10px; }
+.dr-gedar-title h1 { font-size: 33px; }
+.blog-section { padding: 32px 0 0 0; }
+.blog-heading h2 { font-size: 30px; }
+.message-form-content { padding: 0 0 0 10px; }
+.message-form-content h2 { font-size: 24px; }
+.message-form-content p { font-size: 16px; margin: 0 0 6px; line-height: 25px; }
+.message-form-content ul { margin: 12px 0 8px 0; padding: 4px 0; }
+.message-form-content ul li { font-size: 15px; }
+.message-form-content span { font-size: 16px; line-height: 25px; }
+.button { font-size: 14px; line-height: 41px; width: 102px; height: 41px; }
+.read-more-btn .button::before { width: 115px; height: 51px; top: -5px; left: -7px; }
+.read-more-btn { padding-top: 15px; }
+.know-about-content { padding-top: 14px; }
+.know-about-content h3 { font-size: 17px; }
+.know-about-content ul li { margin: 0 13px 0 0; font-size: 15px; }
+.know-about-content p { font-size: 16px; line-height: 28px; }
+.congress-roots-img h3 { font-size: 30px; margin: 0 0 5px; }
+.congress-roots-img span { font-size: 16px; line-height: 23px; margin: 0 0 6px; }
+.congress-roots-img p { font-size: 14px; line-height: 25px; }
+.dr-dedar-title { font-size: 40px; padding-top: 19px; }
+.congress-roots-img { padding: 80px 0 80px 176px; }
+.congress-roots::after { bottom: -46px; right: 257px; width: 101px; height: 98px; }
+.roots-col-right { max-width: 435px; z-index: 1; position: relative; }
+.congress-roots { margin-right: -150px; }
+.congress-roots-img { padding: 85px 0 85px 165px; }
+.watch-video figure { width: 50px; height: 50px; }
+.watch-video span { font-size: 20px; }
+.blog-heading { padding: 0 50px; }
+.blog-heading p { font-size: 15px; line-height: 25px; margin: 8px 0 2px 0; padding: 0; }
+.gallery-section { padding: 35px 0 0 0; }
+.contact-touch-section { margin-top: 50px; }
+.gfield_label { font-size: 16px; margin: 0 0 4px; }
+.button::before { width: 118px; height: 54px; top: -6px; left: -8px; }
+.gform_wrapper { padding-top: 15px; }
+.contact-form .gform_wrapper .medium { padding: 8px !important; height: 40px; }
+.gform_wrapper .gform_fields li.gfield.gf_left_half, .gform_wrapper .gform_fields li.gfield.gf_right_half { margin-bottom: 0; }
+.contact-form li.gfield { padding: 0 9px 8px; }
+.contact-form .gform_wrapper .textarea.medium { height: 60px; }
+.gform_footer input.button-btn { font-size: 16px; line-height: 50px; width: 115px; height: 50px; }
+.gform_footer input.button-btn { margin-top: 10px; }
+.form-consulation::after { bottom: -40px; height: 40px; }
+.footer-section { padding-top: 60px; }
+.footer { border-top: 4px solid #cb5100; padding-top: 25px; }
+.footer-logo-img figure { margin: 0 0 15px; }
+.footer-logo-img figure>img { width: 200px; }
+.footer-logo-img span { font-size: 20px; }
+.footer-social { padding: 10px 0 20px 0; }
+.footer-social a>img { width: 30px; }
+.footer-navebar { text-align: center; padding: 18px 0 14px 0; }
+.footer-navebar ul li { font-size: 16px; }
+.footer-navebar ul li::before { padding: 0 10px; }
+
+/*---------------------contact------------------------*/
+.Contact-margin { margin: 0; padding-top: 28px; }
+
+/*-------------------------about----------------------*/
+.about-left { width: 430px; height: 450px; }
+.about-content h3 { font-size: 30px; margin: 0 0 8px; }
+.about-content span { font-size: 15px; line-height: 20px; margin: 0 0 7px; }
+.about-content p { font-size: 15px; line-height: 24px; }
+.about-inner-section { padding: 30px 0 0; }
+
+}
+
+
+@media (max-width:991px){
+     .container { max-width: 100%; }
+.social-top a { padding: 6px 7px; }
+.top-right span { font-size: 15px; }
+.dr-gedar-title h1 { font-size: 26px; }
+.blog-heading h2 { font-size: 26px; }
+.message-form { padding: 35px 0 45px; }
+.message-form-content h2 { font-size: 18px; }
+.message-form-content ul { margin: 9px 0 7px 0; padding: 4px 0; }
+.message-form-content ul li { font-size: 14px; }
+.message-form-content p { font-size: 14px; margin: 0 0 6px; line-height: 23px; }
+.message-form-content span { font-size: 14px; line-height: 22px; }
+.read-more-btn .button::before { width: 104px; height: 45px; top: -5px; left: -7px; }
+.button { font-size: 13px; line-height: 34px; width: 90px; height: 34px; }
+.know-about-content h3 { font-size: 14px; }
+.know-about-content ul li img { margin-right: 3px; position: relative; top: -1px; width: 13px; }
+.know-about-content ul li { margin: 0 3px 0 0; font-size: 12px; }
+.know-about-content p { font-size: 14px; line-height: 23px; }
+.congress-roots span { font-size: 88px; top: 50%; transform: translate(-106px, -50%); }
+.congress-roots-img h3 { font-size: 23px; margin: 0 0 4px; }
+.congress-roots-img span { font-size: 14px; line-height: 21px; margin: 0 0 5px; }
+.congress-roots-img p { font-size: 14px; line-height: 21px; }
+.congress-roots { margin-right: -125px; }
+.dr-dedar-title { font-size: 30px; padding-top: 10px; }
+.congress-roots-img { padding: 87px 10px 33px 129px; }
+.congress-roots::after { bottom: -15px; right: 136px; width: 100px; height: 85px; background-size: 100%; }
+.blog-heading { padding: 0; }
+.blog-heading p { font-size: 14px; line-height: 22px; margin: 8px 0 0 0; padding: 0; }
+.watch-video img { width: 13px !important; }
+.watch-video figure { width: 40px; height: 40px; }
+.watch-video span { font-size: 16px; padding: 5px 3px; }
+.gallery-gedar-img ul li .img-hover figure img { top: 3px; width: 16px; }
+.gallery-gedar-img ul li .img-hover figure a { width: 40px; height: 40px; }
+.contact-touch-section { margin-top: 40px; padding: 310px 0 0 0; }
+.contact-form { position: relative; margin: -255px 0 0 0; }
+.form-consulation { padding: 25px 40px 25px; }
+.gform_wrapper { padding-top: 12px; }
+.gfield_label { font-size: 14px; margin: 0 0 3px; }
+.contact-form .gform_wrapper .medium { height: 35px; }
+.contact-form .gform_wrapper .textarea.medium { height: 56px; }
+.contact-form li.gfield { padding: 0 9px 6px; }
+.gform_footer input.button-btn { margin-top: 7px; }
+.gform_footer input.button-btn { font-size: 14px; line-height: 43px; width: 100px; height: 45px; }
+.form-consulation::after { bottom: -30px; height: 30px }
+.footer-section { padding-top: 40px; }
+.footer { border-top: 4px solid #cb5100; padding-top: 16px; }
+.footer-logo-img figure>img { width: 175px; }
+.footer-logo-img figure { margin: 0 0 11px; }
+.footer-social a>img { width: 25px; }
+.footer-navebar { text-align: center; padding: 15px 0 12px 0; }
+.footer-navebar ul li { font-size: 14px; }
+.footer-navebar ul li::before { padding: 0 8px; }
+.copy-right p { font-size: 14px; }
+.copy-right { padding-bottom: 16px; }
+
+/*---------------------contact------------------------*/
+.Contact-margin { margin: 0; padding-top: 24px; }
+
+/*-------------------------about----------------------*/
+.about-left { width: 315px; height: 336px; }
+.padding-top { padding-top: 32px; }
+.about-content h3 { font-size: 25px; margin: 0 0 8px; }
+.about-content span { font-size: 14px; line-height: 19px; margin: 0 0 7px; }
+.about-content p { font-size: 14px; line-height: 24px; }
+
+}
+
+@media (max-width:767px){
+     .top-right span { font-size: 14px; }
+.top-right span img { margin-right: 6px; top: -1px; width: 22px; }
+.social-top a { padding: 5px 7px; }
+.dr-gedar-title h1 { font-size: 20px; }
+.dr-gedar-title { padding: 4px 0; }
+.blog-section { padding: 20px 0 0 0; }
+.blog-heading h2 { font-size: 20px; }
+.blog-section .col-sm-6 { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+.message-form { padding: 23px 0 20px; }
+.blog-event-img { padding-left: 0; padding-bottom: 10px; }
+.message-form-content h2 { font-size: 17px; }
+.political-section .col-sm-4 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; }
+.political-section .row{-webkit-box-pack: center !important; -ms-flex-pack: center !important; justify-content: center !important;}
+.political-commitment { padding: 25px 0 0 0; }
+.congress-roots::after { bottom: 55px; width: 72px; height: 62px; background-size: 100%; left: -112px; }
+.congress-roots { margin-right: 13px; max-width: 317px; }
+.congress-roots span { font-size: 50px; top: 50%; transform: translate(-106px, -50%); }
+.political-party-section .col-sm-4 { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+.political-party-section .col-sm-8 { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+.congress-roots-img { padding: 25px 10px 25px 25px; border-radius: 6px; }
+.congress-roots-img h3 { font-size: 20px; }
+.dr-dedar-title { font-size: 27px; padding-top: 10px; }
+.congress-roots-img::before { border-radius: 6px; }
+.political-party-section { padding: 30px 0; }
+.testimonials-section .col-sm-4 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; padding: 0 12px 0; }
+.watch-video span { font-size: 14px; padding: 5px 2px; }
+.testimonials-service-img { margin-top: 20px; }
+.gallery-section { padding: 30px 0 0 0; }
+.form-consulation { padding: 22px 26px 22px; }
+.contact-form .gform_wrapper .medium { height: 30px; }
+.contact-form li.gfield { padding: 0 5px 3px; }
+.gform_footer input.button-btn { font-size: 13px; line-height: 40px; width: 80px; height: 42px; }
+.logo a img { max-width: 180px; }
+
+/*---------------------contact------------------------*/
+.Contact-margin { margin: 0; padding-top: 22px; }
+
+/*-------------------------about----------------------*/
+.about-left { width: 200px; height: 215px; }
+.about-inner-section { padding: 24px 0 0; }
+.padding-top { padding-top: 19px; } .about-content h3 { font-size: 20px; margin: 0 0 8px; }
+}
+
+@media (max-width:575px){ 
+     .carousel-control-prev img { width: 8px; }
+.carousel-control-prev, .carousel-control-next { height: 32px; width: 32px !important; }
+.dr-gedar-title h1 { font-size: 18px; }
+.blog-heading h2 { font-size: 18px; padding: 0 0 15px; }
+.blog-heading h2::before { width: 350px; height: 12px; background-size: 100%; }
+.message-form-content h2 { font-size: 16px; }
+.blog-event-img { padding-left: 0; padding-bottom: 8px; }
+.message-form-content ul { margin: 7px 0 7px 0; padding: 4px 0; }
+.political-commitment { padding: 20px 0 0 0; }
+.know-about-content h3 { font-size: 13px; }
+.congress-roots-img h3 { font-size: 19px; }
+.gallery-gedar-img ul li { list-style: none; -webkit-box-flex: 0; -ms-flex: 0 0 25%; flex: 0 0 33.33%; max-width: 33.33%; position: relative; }
+.contact-form { position: relative; margin: -215px 0 0 0; }
+.contact-touch-section { margin-top: 40px; padding: 256px 0 0 0; }
+.contact-form .gform_wrapper .medium { height: 28px; }
+.footer-section { padding-top: 35px; }
+.footer-logo-img figure>img { width: 160px; }
+.footer-logo-img figure { margin: 0 0 9px; }
+.footer-logo-img span { font-size: 17px; }
+.footer-social a>img { width: 22px; }
+.footer-social { padding: 10px 0 16px 0; }
+.footer-navebar { text-align: center; padding: 13px 0 10px 0; }
+.footer-navebar ul li::before { padding: 0 5px; }
+.copy-right p { font-size: 13px; }
+#back-top-wrapper { right: 28px; bottom: 6px; }
+.carousel-control-next img { width: 8px; }
+.congress-roots::after { bottom: 81px; width: 62px; height: 54px; background-size: 100%; left: -79px; }
+.congress-roots span { font-size: 30px; top: 50%; transform: translate(-68px, -50%); }
+.top-right span { font-size: 12px; }
+
+/*---------------------contact------------------------*/
+.Contact-margin { margin: 0; padding-top: 21px; }
+
+/*-------------------------about----------------------*/
+.about-left { width: 150px; height: 163px; }
+.padding-top { padding-top: 4px; }
+.about-content span { font-size: 13px; line-height: 18px; margin: 0 0 5px; }
+.about-inner-section { padding: 20px 0 0; }
+}
+
+@media (max-width:480px){
+     .top-right { text-align: center; }
+     .top-right span img { margin-right: 6px; top: -1px; width: 20px; }
+.social-top a { padding: 3px 4px; }
+.top-right span img { margin-right: 3px; top: -1px; width: 21px; }
+.top-right span { padding-right: 3px; }
+.logo a img { max-width: 164px;}
+.carousel-control-prev img { width: 6px; }
+.carousel-control-next img { width: 6px; }
+.carousel-control-prev, .carousel-control-next { height: 28px; width: 28px !important; }
+.political-section .col-sm-4 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 100%; max-width: 100%; }
+.blog-heading h2::before { width: 250px; height: 12px; background-size: 100%; }
+.congress-roots { max-width: 216px; }
+.congress-roots::after { bottom: 16px; width: 62px; height: 54px; background-size: 100%; left: -72px; }
+.testimonials-section .col-sm-4 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 100%; max-width: 100%; padding: 0 15px 0; }
+.gallery-gedar-img ul li { list-style: none; -webkit-box-flex: 0; -ms-flex: 0 0 25%; flex: 0 0 50%; max-width: 50%; position: relative; }
+.gform_wrapper .gform_fields li.gfield.gf_left_half, .gform_wrapper .gform_fields li.gfield.gf_right_half { width: 100% !important; float: left; }
+
+/*-------------------------about----------------------*/
+.about-left { width: 100%; height: 100%; margin: 0; text-align: center; float: none; }
+.padding-top { padding-top: 10px; }
+}
+
+@media (max-width:320px){}

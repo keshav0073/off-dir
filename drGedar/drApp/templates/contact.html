@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+      
+    <section class="home-slide">
+        {% if ab_sli%}
+        {% for x in ab_sli %}
+        <img src="{{ x.image.url }}">
+        {% endfor %}
+        {% else %}
+        <img src="{% static 'images/home-hero-img.jpg'%}">
+        {% endif %}
+    
+    </section>
+    
+    {% if dr%}
+    <section class="dr-gedar-section">
+        <div class="container">
+            <div class="dr-gedar-title">
+                {% for x in dr %}
+                <h1><strong>{{ x.text_in_strong }}</strong> {{ x.text_out_strong }}</h1>
+                {%endfor %}
+            </div>
+        </div>
+    </section>
+    {% else %}
+    {% endif %}
+
+<section class="contact-form Contact-margin">
+    <div class="container">  
+        <div class="form-consulation">                   
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="blog-heading">
+                    <h2>Contact</h2>
+                    <p>Subscribe to the campaign updates by entering the following
+                    information below.
+                    </p>
+                    </div>                                
+                    <div class="gform_wrapper">
+                        <form method="POST" enctype="multipart/form-data" action="{% url 'contact_form' %}">
+                        {% csrf_token%}
+                            <div class="gform_body">
+                                <ul class="gform_fields">
+                                    <li class="gfield gf_left_half">
+                                        <label class="gfield_label">First Name*</label>
+                                        <div class="ginput_container">
+                                        <input type="text" class="medium" name="first_name" value="" required="required">
+                                        </div>
+                                    </li>
+                                    <li class="gfield gf_left_half">
+                                        <label class="gfield_label">Last Name*</label>
+                                        <div class="ginput_container">
+                                        <input type="text" class="medium" name="last_name" value="" required="required">
+                                        </div>
+                                    </li>
+                                    <li class="gfield">
+                                        <label class="gfield_label">E-Mail Address*</label>
+                                        <div class="ginput_container">
+                                        <input type="email" class="medium" name="email" value="" required="required">
+                                        </div>
+                                    </li>
+                                    <li class="gfield">
+                                        <label class="gfield_label">Phone No.*</label>
+                                        <div class="ginput_container">
+                                        <input type="tel" id="phone" class="medium" name="phone_number" value="" required="required"
+                                        data-intl-tel-input-id="0" onkeyup="if (/\D/g.test(this.value)) this.value =
+                                        this.value.replace(/\D/g,'')" maxlength=10>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="gfield">
+                                        <label class="gfield_label">Message*</label>
+                                        <div class="ginput_container">
+                                        <textarea name="message" class="textarea medium" required="required"></textarea>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gform_footer">
+                            <input type="submit" name="" value="submit" class="button-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+       
